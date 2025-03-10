@@ -79,7 +79,7 @@ input {
   box-sizing: border-box;
 }
 input:focus {
-  border-color: #28a745;
+  border-color: #8A1C7C;
   outline: none;
 }
 
@@ -87,7 +87,7 @@ input:focus {
 button {
   width: 100%;
   padding: 12px;
-  background-color: #28a745;
+  background-color: #000000;
   color: white;
   border: none;
   cursor: pointer;
@@ -96,7 +96,7 @@ button {
   margin-top: 10px;
 }
 button:hover {
-  background-color: #218838;
+  background-color: #8A1C7C;
 }
 
 /* Links */
