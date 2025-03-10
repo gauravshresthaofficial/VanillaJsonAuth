@@ -15,8 +15,8 @@ This project implements a basic authentication system with signup, login, and ho
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
-cd <repository-folder>
+git clone https://github.com/gauravshresthaofficial/VanillaJsonAuth.git
+cd VanillaJsonAuth
 ```
 
 ### 2. Install Dependencies
