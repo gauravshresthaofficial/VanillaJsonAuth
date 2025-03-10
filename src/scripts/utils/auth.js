@@ -32,10 +32,10 @@ export const loginUser = async (email, password) => {
 
     localStorage.setItem("user", JSON.stringify(userData)); // Store safe data
 
-    return userData; // Return user data on successful login
+    return true; // Return user data on successful login
   } catch (error) {
     console.error("Error during login:", error);
-    return null; // Return null if there's an error during login
+    return false; // Return null if there's an error during login
   }
 };
 
@@ -47,7 +47,7 @@ export const signupUser = async (name, email, password) => {
 
     // Check if email already exists
     if (users.some((user) => user.email === email)) {
-      return null; // Email already exists
+      return false; // Email already exists
     }
 
     const newUser = { name, email, password };
@@ -58,9 +58,9 @@ export const signupUser = async (name, email, password) => {
       body: JSON.stringify(newUser),
     });
 
-    return newUser; // Successful signup
+    return true; // Successful signup
   } catch (error) {
     console.error("Error during signup:", error);
-    return null;
+    return false;
   }
 };
