@@ -1,0 +1,188 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "nav nav"
+    "sidebar main";
+  gap: 20px;
+}
+
+nav {
+  grid-area: nav;
+  background-color: white;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+nav h2 {
+  flex-grow: 1;
+}
+
+sidebar {
+  grid-area: sidebar;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 0;
+  background-color: white;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+sidebar div {
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(2, 2, 2, 0.1);
+}
+sidebar div div {
+  background-color: rgb(198, 198, 198);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+main {
+  grid-area: main;
+  padding: 20px 60px;
+  background-color: white;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+form {
+  max-width: 360px;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+input:focus {
+  border-color: #28a745;
+  outline: none;
+}
+
+/* Button Styles */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+button:hover {
+  background-color: #218838;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #007bff;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin: 2px 0;
+  text-align: left;
+}
+
+/* Password Toggle */
+#personal-details div {
+  position: relative;
+}
+
+#togglePassword {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Notification Styling */
+#notification {
+  font-size: 0.9rem;
+  position: fixed;
+  bottom: 36px;
+  color: #ffffff;
+  text-align: center;
+  padding: 8px;
+  background-color: rgba(6, 55, 13, 0.579);
+  border-radius: 6px;
+  min-width: 400px;
+  margin: 0 auto;
+  animation: slideUp 0.3s ease-out forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  sidebar {
+    display: none;
+  }
+
+  main {
+    border-radius: 16px;
+    margin: 0 16px;
+  }
+
+  form {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #notification {
+    top: 36px;
+    height: fit-content;
+    min-width: fit-content;
+    width: calc(100% - 40px);
+  }
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="public/assets/css/profile.css">
+</head>
+
+<body>
+    <nav>
+        <h2>Profile</h2>
+        <a href="/">Go back</a>
+    </nav>
+    <sidebar id="sidebar">
+        <h2>All users</h2>
+    </sidebar>
+    <main>
+        <form id="personal-details">
+            <h2>Personal Details</h2>
+            <input type="text" id="name" placeholder="Name" />
+            <p class="error-message" id="name-error"></p>
+
+            <input type="email" id="email" placeholder="Email" required readonly />
+            <p class="error-message" id="email-error"></p>
+
+            <div>
+                <input type="password" id="password" placeholder="Password" />
+                <p id="togglePassword">show</p>
+                <p class="error-message" id="password-error"></p>
+            </div>
+
+            <button type="submit">Save</button>
+        </form>
+        <p id="notification" class="hidden"></p>
+    </main>
+    <script type="module" src="/src/scripts/profile.js"></script>
+</body>
+
+</html>

@@ -1,3 +1,5 @@
+const API = import.meta.env.VITE_API_URL;
+
 // Check if user is logged in
 export const isLoggedIn = () => {
   return localStorage.getItem("user");
@@ -11,9 +13,7 @@ export const logoutUser = () => {
 // Login function
 export const loginUser = async (email, password) => {
   try {
-    const response = await fetch(
-      `http://localhost:3000/users?email=${email}&password=${password}`
-    );
+    const response = await fetch(`${API}?email=${email}&password=${password}`);
     const users = await response.json();
 
     // If no user matches the provided credentials, return null
@@ -42,7 +42,7 @@ export const loginUser = async (email, password) => {
 // Signup function (Prevents duplicate emails)
 export const signupUser = async (name, email, password) => {
   try {
-    const response = await fetch("http://localhost:3000/users");
+    const response = await fetch(API);
     const users = await response.json();
 
     // Check if email already exists
@@ -52,7 +52,7 @@ export const signupUser = async (name, email, password) => {
 
     const newUser = { name, email, password };
 
-    await fetch("http://localhost:3000/users", {
+    await fetch(API, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newUser),

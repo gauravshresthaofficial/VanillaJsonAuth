@@ -1,0 +1,186 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  padding: 0 16px;
+  width: 100vw;
+  background-color: white;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav h2 {
+  flex-grow: 1;
+}
+nav a {
+  margin-right: 10px;
+}
+
+#welcome-message {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+#profile-btn {
+  cursor: pointer;
+}
+
+#logout {
+  width: fit-content;
+  padding: 10px 64px;
+  cursor: pointer;
+}
+
+/* Form Styles */
+form {
+  background: white;
+  padding: 20px;
+  width: 360px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: left;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #28a745;
+  outline: none;
+}
+
+/* Button Styles */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+#cancel-logout {
+  background-color: white;
+  border: 1px solid #28a745;
+  color: black;
+}
+
+#cancel-logout:hover {
+  background-color: #28a74623;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #007bff;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin: 2px 0;
+  text-align: left;
+}
+
+/* Modal Styles */
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.106);
+  backdrop-filter: blur(5px);
+}
+
+.dialog {
+  width: 360px;
+  min-height: 200px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dialog div {
+  display: flex;
+  gap: 10px;
+}
+
+/* Image Close Button */
+img {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 16px;
+  height: 16px;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: rgb(234, 234, 234);
+  opacity: 60%;
+  cursor: pointer;
+}
+
+img:hover {
+  transform: scale(120%);
+  opacity: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  form {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .dialog {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

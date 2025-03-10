@@ -2,9 +2,21 @@
   "users": [
     {
       "id": "dce2",
-      "name": "user",
+      "name": "Test User",
       "email": "user@gmail.com",
-      "password": "secret"
+      "password": "userpwd"
+    },
+    {
+      "id": "280c",
+      "name": "Ram Shrestha",
+      "email": "ram@gmail.com",
+      "password": "rampwd"
+    },
+    {
+      "id": "c520",
+      "name": "Sita Shrestha",
+      "email": "sita@gmail.com",
+      "password": "sitapwd"
     }
   ]
 }
