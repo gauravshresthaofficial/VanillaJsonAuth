@@ -30,7 +30,11 @@ Install the necessary npm packages (including JSON Server) by running:
 npm install
 ```
 
-### 3. Start the JSON Server
+### 3. Create a .env File
+
+Locate the .envSample file in the project directory. Create a new .env file by copying its contents and replacing "YOUR_URL" with your actual API endpoint.
+
+### 4. Start the JSON Server
 
 To run the mock backend server, use the following command:
 
@@ -70,7 +74,7 @@ This will serve the pages (`index.html`, `signup.html`, `login.html`, `profile.h
 
 ### Profile Page
 
-- The user will be able to edit the user information.
+- The user will be able to edit/update the user information.
 
 ## Dependencies
 
